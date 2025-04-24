@@ -36,7 +36,7 @@ void PlayerShip::HandleInput(const InputState& input)
 		// Normalize the direction
 		if (direction.X != 0 && direction.Y != 0)
 		{
-			direction *= Math::NORMALIZE_PI_OVER4;
+			direction *= 2; // Changed the speed of the player's ship
 		}
 
 		TriggerType type = TriggerType::None;

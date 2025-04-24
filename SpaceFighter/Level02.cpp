@@ -44,6 +44,8 @@ void Level02::LoadContent(ResourceManager& resourceManager)
 		AddGameObject(pEnemy);
 	}
 
+	SetBackground(resourceManager.Load<Texture>("Textures\\SpaceBackground02.png")); // Added a background image to Level 2
+
 	Level::LoadContent(resourceManager);
 }
 

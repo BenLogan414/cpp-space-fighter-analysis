@@ -15,8 +15,8 @@ void BioEnemyShip::Update(const GameTime& gameTime)
 {
 	if (IsActive())
 	{
-		float x = sin(gameTime.GetTotalTime() * Math::PI + GetIndex());
-		x *= GetSpeed() * gameTime.GetElapsedTime() * 1.4f;
+		float x = cos(gameTime.GetTotalTime() * Math::PI + GetIndex()); // changed to cos
+		x *= GetSpeed() * gameTime.GetElapsedTime() * 3.1f; // Speed changed, Bio Enemy ship moves more erratic now
 		TranslatePosition(x, GetSpeed() * gameTime.GetElapsedTime());
 
 		if (!IsOnScreen()) Deactivate();
